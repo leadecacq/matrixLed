@@ -356,6 +356,20 @@ byte customArray[NB_ROWS] = {
 	B00000000,
 	B00000000
 };
+const byte VIRGULE[NB_ROWS] = {
+	B00000,
+	B00000,
+	B00000,
+	B00100,
+	B01000
+	
+};
+const byte POINT[NB_ROWS] = {
+	B00000,
+	B00000,
+	B00000,
+	B00000,
+	B01000
 
 const uint8_t NB_LETERS = 26;
 
@@ -393,6 +407,8 @@ void cvtCharByte(const char textDisplay, byte textByte[NB_ROWS]) {
 		case 'Y': memcpy(textByte, Y, sizeof(EMPTY)); break;
 		case 'Z': memcpy(textByte, Z, sizeof(EMPTY)); break;
 		case ' ': memcpy(textByte, EMPTY, sizeof(EMPTY)); break;
+	        case ',': memcpy(textByte, VIRGULE, sizeof(EMPTY)); break;
+	        case '.': memcpy(textByte, POINT, sizeof(EMPTY)); break;
 		default: memcpy(textByte, A, sizeof(EMPTY));
 	}
 };
