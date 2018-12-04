@@ -24,8 +24,7 @@ const byte A[NB_ROWS] = {
 	B01111110,
 	B01000010,
 	B01000010,
-	B01000010,
-	B01000010
+	
 };
 const byte B[NB_ROWS] = {
 	B01111110,
